@@ -8,7 +8,10 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 const ProductList = (props) => {
     const { product } = props;
-    console.log(product)
+    const { removeFromDom } = props;
+
+
+
     return (
         <div>
             <h1>Product List</h1>

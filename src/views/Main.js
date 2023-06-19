@@ -10,6 +10,8 @@ import ProductList from '../components/ProductList';
 
 
 const Main = (props) => {
+    const { removeFromDom } = props;
+
     // setting the states
     const [product, setProduct] = useState([]);
     const [loaded, setLoaded] = useState(false);
@@ -28,7 +30,7 @@ const Main = (props) => {
         <div>
             <ProductForm />
             <hr />
-            {loaded && <ProductList product={product} />}
+            {loaded && <ProductList product={product} removeFromDom={removeFromDom} />}
         </div>
     )
 }
